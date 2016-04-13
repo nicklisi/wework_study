@@ -1,4 +1,0 @@
-- pip install slackclient
-- get a web token https://api.slack.com/docs/oauth-test-tokens
-- copy config_example.py to config.py and change the value of web_token!
-- run with "python main.py"
