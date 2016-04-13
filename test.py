@@ -18,7 +18,7 @@ soup = BeautifulSoup(response.content)
 content = soup.find("div", { "id" : "mw-content-text" })
 
 #getText the content object to get just the text without tags
-content_text = content.getText()
+content_text = content.getText(separator=u' ')
 
 #getText returns a unicode encoded string which is difficult to work with, I was getting errors. attempting to encode it to ascii
 content_text_string = content_text.encode('ascii', 'replace')
@@ -27,7 +27,7 @@ content_text_string = content_text.encode('ascii', 'replace')
 
 #write the output to a file called workfile so we can look at the entire output 
 f = open('workfile', 'w+')
-f.write(content_text_string)
+f.write(content_text.encode('utf-8'))
 
 #also print to terminal
 print (content_text_string)

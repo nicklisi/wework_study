@@ -9,9 +9,9 @@ class TrollBot():
 				return None
 			try:
 				# Search the message for a keyword. If not found, throws ValueError.
-				unicode.index(event["text"], "taco")
+				unicode.index(event["text"], "tuesday")
 				# Return the response text!
-				return "did someone say taco?"
+				return "Someone said tuesday. Reminder: did anyone reserve the room?"
 			except ValueError:
 				pass
 		return None
